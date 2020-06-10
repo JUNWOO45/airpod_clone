@@ -33,6 +33,7 @@ a {
   padding: 0 1rem; 
 }
 
+/* 모바일 퍼스트 */
 .global-nav-links,
 .local-nav-links {
   display: flex;
@@ -76,7 +77,7 @@ a {
   justify-content: center;
   height: 3em;
   font-size: 2.5rem;
-  background-color: silver;
+  /* background-color: silver; */
   margin: 5px 0;
 }
 
@@ -96,6 +97,8 @@ a {
   font-size: 1.2rem;
   color: #888;
   padding: 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .description strong {
@@ -119,7 +122,8 @@ a {
 .mid-message {
   font-size: 2rem;
   color: #888;
-  /* padding: 0 1rem; */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 #scroll-section-3 {
@@ -134,6 +138,8 @@ a {
 .canvas-caption {
   color: #666;
   font-size: 1.2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .footer {
@@ -146,6 +152,59 @@ a {
   margin-top: 5rem;
 }
 
+.sticky-elem {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#show-scene-0 #scroll-section-0 .sticky-elem, 
+#show-scene-1 #scroll-section-1 .sticky-elem, 
+#show-scene-2 #scroll-section-2 .sticky-elem, 
+#show-scene-3 #scroll-section-3 .sticky-elem {
+  display: block;
+}
+
 @media (min-width: 1024px) {
-  
+  #scroll-section-0 h1{
+    font-size: 9vw;
+    /* font-size: 4rem;
+    text-align: center; */
+  }
+
+  .main-message {
+    font-size: 4vw;
+  }
+
+  .description {
+    font-size: 2vw;
+  }
+
+  .description strong {
+    font-size: 6vw;
+  }
+
+  #scroll-section-2 .main-message {
+    font-size: 6vw;
+  }
+
+  .main-message small {
+    font-size: 1.5vw;
+  }
+
+  .description-message {
+    width: 20%;
+  }
+
+  .mid-message {
+    font-size: 3vw;
+  }
+
+  .canvas-caption {
+    font-size: 2vw;
+  }
+
 }
