@@ -23,12 +23,14 @@ a {
 .global-nav {
   height: 44px;
   width: 100%;
+  padding: 0 1rem;
 }
 
 .local-nav {
   height: 52px;
   width: 100%;
   border-bottom: 1px solid #ddd;
+  padding: 0 1rem; 
 }
 
 .global-nav-links,
@@ -53,4 +55,42 @@ a {
   margin-right: auto;
   font-size: 21px;
   font-weight: bold;
+}
+
+.scroll-section {
+  padding-top: 50vh;
+}
+
+#scroll-section-0 h1{
+  font-size: 4rem;
+  text-align: center;
+}
+
+.main-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  font-size: 2.5rem;
+  background-color: silver;
+  margin: 5px 0;
+}
+
+.main-message p {
+  line-height: 1.4;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #888;
+  padding: 0 1rem;
+}
+
+.description strong {
+  font-size: 3rem;
+  color: black;
+  float: left;
+  margin: 0 10px;
 }
