@@ -66,6 +66,10 @@ a {
   text-align: center;
 }
 
+#scroll-section-2 .main-message {
+  font-size: 3.5rem;
+}
+
 .main-message {
   display: flex;
   align-items: center;
@@ -82,6 +86,12 @@ a {
   text-align: center;
 }
 
+.main-message small {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
 .description {
   font-size: 1.2rem;
   color: #888;
@@ -90,7 +100,52 @@ a {
 
 .description strong {
   font-size: 3rem;
-  color: black;
+  color: #333;
   float: left;
   margin: 0 10px;
+}
+
+.description-message {
+  font-weight: bold;
+  width: 50%;
+}
+
+.pin {
+  width: 1px;
+  height: 100px;
+  background-color: #333;
+}
+
+.mid-message {
+  font-size: 2rem;
+  color: #888;
+  /* padding: 0 1rem; */
+}
+
+#scroll-section-3 {
+  padding: 0 1rem;
+}
+
+.mid-message strong {
+  color: #333;
+  display: block;
+}
+
+.canvas-caption {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #666;
+  color: white;
+  height: 7rem;
+  margin-top: 5rem;
+}
+
+@media (min-width: 1024px) {
+  
 }
