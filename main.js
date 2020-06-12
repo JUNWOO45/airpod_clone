@@ -1,4 +1,7 @@
 (() => {
+  let yOffSet;
+  let prevScrollHeight = 0;
+  let currentScene;
 
   const sceneInfo = [
     {
@@ -46,8 +49,34 @@
     }
   }
   
-  setLayout();
-  console.log(sceneInfo);
+  function scrollLoop() {
+    for(let i = 0; i < sceneInfo.length; i++) {
+      prevScrollHeight += sceneInfo[i].scrollHeight;
+    }
+  }
 
+  function getCurrentScene() {
+    if((yOffSet < prevScrollHeight / 4)) {
+      currentScene = 0;
+    } else if((yOffSet < prevScrollHeight / 4 * 2) ) {
+      currentScene = 1;
+    } else if((yOffSet < prevScrollHeight / 4 * 3)) {
+      currentScene = 2;
+    } else if((yOffSet < prevScrollHeight / 4 * 4)) {
+      currentScene = 3;
+    }
+
+    console.log(currentScene);
+  }
+
+  setLayout();
+  scrollLoop();
   window.addEventListener('resize', setLayout);
+
+  window.addEventListener('scroll', () => {
+    yOffSet = window.pageYOffset;
+    getCurrentScene();
+    console.log('prevScrollHeight : ', prevScrollHeight);
+    console.log('yOffSet : ', yOffSet);
+  })
 })();
